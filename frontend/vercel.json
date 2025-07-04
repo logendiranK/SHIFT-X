@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vite.config.js",
+      "src": "package.json",
       "use": "@vercel/static-build"
     }
   ],
@@ -11,8 +11,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "static": {
-    "trailingSlash": false
-  }
+  ]
 }
