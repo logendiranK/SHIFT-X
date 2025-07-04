@@ -1,0 +1,244 @@
+.part-time-job-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 50px;
+  background: #18013f;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  padding-left: 100px;
+}
+
+.part-time-job-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fdf9f9;
+}
+
+.part-time-job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.part-time-job-form input,
+.part-time-job-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #121212;
+  font-size: 15px;
+  max-width: inherit;
+}
+
+.part-time-job-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.part-time-job-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.part-time-job-form button:hover {
+  background-color: #218838;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Container and Header */
+.part-time-jobs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.jobs-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.post-job-button {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.post-job-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+}
+
+/* Jobs Grid */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #e9ecef;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.job-card:hover {
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.job-card h2 {
+  font-size: 1.4rem;
+  color: #4b3fa7;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.job-card h3 {
+  font-size: 1.1rem;
+  color: #764ba2;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.job-details p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.job-description {
+  color: #333;
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.job-requirements {
+  margin-top: 8px;
+}
+
+.job-requirements h4 {
+  margin: 0 0 4px 0;
+  color: #667eea;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.job-requirements ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.job-requirements li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+.job-contact p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.job-status {
+  margin-top: 8px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #e9ecef;
+  color: #333;
+}
+.status-badge.open {
+  background: #d4edda;
+  color: #155724;
+}
+.status-badge.closed {
+  background: #f8d7da;
+  color: #721c24;
+}
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.loading, .error, .no-jobs {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .jobs-header h1 {
+    font-size: 2rem;
+  }
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .part-time-jobs-container {
+    padding: 20px 5px;
+  }
+  .jobs-header {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .job-card {
+    padding: 18px 10px;
+  }
+}

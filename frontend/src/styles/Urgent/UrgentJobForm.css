@@ -1,0 +1,85 @@
+.urgent-job-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 50px;
+  background: #18013f;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  padding-left: 100px;
+}
+
+.urgent-job-form-container-head {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #dc3545;
+}
+
+.success-message,
+.error-message {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.urgent-job-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.urgent-job-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.urgent-job-form input,
+.urgent-job-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.urgent-job-form input:focus,
+.urgent-job-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.urgent-job-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #c82333;
+}
