@@ -13,7 +13,7 @@ const UrgentJobs = () => {
     useEffect(() => {
         const fetchUrgentJobs = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/urgentjobs');
+                const response = await axios.get('https://shift-x.onrender.com/api/urgentjobs');
                 const urgentJobsData = response.data.filter(job => job.jobType === 'Urgent');
                 setUrgentJobs(urgentJobsData);
                 setLoading(false);

@@ -45,7 +45,7 @@ const PartTimeJobForm = () => {
         requirements: formData.requirements.split(",").map((req) => req.trim()),
       };
 
-      await axios.post("http://localhost:5000/api/part-time-jobs", jobData);
+      await axios.post("https://shift-x.onrender.com/api/part-time-jobs", jobData);
       setMessage("Part-time job posted successfully!");
       setFormData({
         title: "",

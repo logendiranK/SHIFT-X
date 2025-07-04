@@ -110,7 +110,7 @@ const WorkerProfile = () => {
         form.append('aadhaarPhoto', aadhaarPhoto);
       }
       const response = await axios.put(
-        `http://localhost:5000/api/workers/${workerId}`,
+        `https://shift-x.onrender.com/api/workers/${workerId}`,
         form,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );

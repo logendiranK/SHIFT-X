@@ -24,10 +24,10 @@ const SignupWorker = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup-worker', formData);
+      const response = await axios.post('https://shift-x.onrender.com/api/auth/signup-worker', formData);
       console.log('Signup success:', response.data);
       
-      // Store worker data in localStorage
+      
       localStorage.setItem('workerId', response.data.worker._id);
       localStorage.setItem('userRole', 'worker');
       

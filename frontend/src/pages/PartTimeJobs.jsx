@@ -17,7 +17,7 @@ const PartTimeJobs = () => {
   const fetchJobs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/part-time-jobs"
+        "https://shift-x.onrender.com/api/part-time-jobs"
       );
       setJobs(response.data);
       setLoading(false);

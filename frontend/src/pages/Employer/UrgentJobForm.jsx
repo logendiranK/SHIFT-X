@@ -40,7 +40,7 @@ const UrgentJobForm = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/urgentjobs",
+        "https://shift-x.onrender.com/api/urgentjobs",
         jobData
       );
       setMessage("Urgent job posted successfully!");

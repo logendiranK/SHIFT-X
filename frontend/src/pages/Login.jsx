@@ -32,8 +32,8 @@ const Login = () => {
     e.preventDefault();
     const endpoint =
       role === 'worker'
-        ? 'http://localhost:5000/api/auth/login-worker'
-        : 'http://localhost:5000/api/auth/login-employer';
+        ? 'https://shift-x.onrender.com/api/auth/login-worker'
+        : 'https://shift-x.onrender.com/api/auth/login-employer';
 
     try {
       const response = await axios.post(endpoint, formData);

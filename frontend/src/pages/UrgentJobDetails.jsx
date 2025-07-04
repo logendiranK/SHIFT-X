@@ -12,7 +12,7 @@ const UrgentJobDetails = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/urgentjobs/${id}`);
+        const response = await axios.get(`https://shift-x.onrender.com/api/urgentjobs/${id}`);
         setJob(response.data);
       } catch {
         setError("Failed to fetch urgent job details.");

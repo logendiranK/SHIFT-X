@@ -17,7 +17,7 @@ const ManageJob = () => {
 
     const fetchJobs = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/part-time-jobs/employer/${employerId}`);
+        const response = await axios.get(`https://shift-x.onrender.com/api/part-time-jobs/employer/${employerId}`);
         setJobs(response.data);
       } catch (err) {
         setError('Failed to fetch jobs');

@@ -12,7 +12,7 @@ const PartTimeJobDetails = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/part-time-jobs/${id}`);
+        const response = await axios.get(`https://shift-x.onrender.com/api/part-time-jobs/${id}`);
         setJob(response.data);
       } catch {
         setError("Failed to fetch job details.");
