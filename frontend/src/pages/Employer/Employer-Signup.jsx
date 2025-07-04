@@ -23,7 +23,7 @@ const SignupEmployer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://shift-x.onrender.com/api/auth/signup-employer', formData);
+      const res = await axios.post('https://shift-x.onrender.com/api/auth//signup-employeer', formData);
       console.log('Signup success:', res.data);
       
       localStorage.setItem('employerId', res.data.employer._id);

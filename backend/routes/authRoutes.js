@@ -37,6 +37,39 @@ router.post('/signup-worker', async (req, res) => {
   }
 });
 
+router.post('/signup-employeer', async (req, res) => {
+  const { name, email, password, phone, location } = req.body;
+  
+  try {
+
+    const existingWorker = await Worker.findOne({ email });
+    if (existingWorker) {
+      return res.status(400).json({ error: 'you already exists with this email' });
+    }
+
+    const worker = new Worker({
+      name,
+      companyName,
+      email,
+      password
+    });
+
+    await worker.save();
+
+    res.status(201).json({
+      message: 'Worker account created successfully',
+      worker: {
+        _id: worker._id,
+        name: worker.name,
+        email: worker.email
+      }
+    });
+  } catch (error) {
+    console.error('Signup error:', error.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 router.post('/login-worker', async (req, res) => {
   const { email, password } = req.body;
