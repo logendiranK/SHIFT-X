@@ -46,7 +46,7 @@ const WorkerProfile = () => {
 
   const fetchWorkerProfile = async (workerId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/workers/${workerId}`);
+      const response = await axios.get(`https://shift-x.onrender.com/api/workers/${workerId}`);
       const worker = response.data;
       
       setWorkerData({
