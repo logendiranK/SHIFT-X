@@ -17,8 +17,8 @@ const SearchJobs = () => {
     setLoading(true);
     try {
       const [urgentRes, partTimeRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/urgentjobs'),
-        axios.get('http://localhost:5000/api/part-time-jobs'),
+        axios.get('https://shift-x.onrender.comapi/urgentjobs'),
+        axios.get('https://shift-x.onrender.com/api/part-time-jobs'),
       ]);
       setUrgentJobs(urgentRes.data);
       setPartTimeJobs(partTimeRes.data);
